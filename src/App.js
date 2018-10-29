@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
-// import bg from './bg.jpg';
-import './test.css';
+import MyHearder from './components/MyHeader';
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 
 class App extends Component {
   render() {
     return (
         <Layout>
-          <Header className="test">Header</Header>
+          <MyHearder/>
           <Content>Content</Content>
           <Footer>Footer</Footer>
         </Layout>
