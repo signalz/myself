@@ -3,15 +3,16 @@ import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
 import MyHearder from './components/MyHeader';
+import MyContent from './components/MyContent';
 
-const { Footer, Content } = Layout;
+const { Footer } = Layout;
 
 class App extends Component {
   render() {
     return (
         <Layout>
           <MyHearder/>
-          <Content>Content</Content>
+          <MyContent/>
           <Footer>Footer</Footer>
         </Layout>
     );
