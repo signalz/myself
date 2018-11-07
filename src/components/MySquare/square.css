@@ -1,0 +1,11 @@
+.square {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}

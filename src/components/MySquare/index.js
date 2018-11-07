@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './square.css';
+
 class MySquare extends Component {
   render() {
     const { primaryText, secondaryText, icon } = this.props;
     return (
-      <div>
+      <div className="square">
         {primaryText}
         {icon}
         {secondaryText}
