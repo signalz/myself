@@ -1,19 +1,42 @@
 import React, { Component } from 'react';
 import { FaLaptopCode, FaMobileAlt, FaServer } from 'react-icons/fa';
 import { Layout } from 'antd';
+import MySquare from '../MySquare';
 
 import './content.css';
 
 const { Content } = Layout;
 
 class MyContent extends Component {
+
+  renderOption = (option, index) => (
+    <MySquare {...option} key={index} />
+  );
+
   render() {
+    const options = [
+      {
+        primaryText: 'Websites',
+        secondaryText: 'Full stack',
+        icon: <FaLaptopCode/>,
+      },
+      {
+        primaryText: 'Mobile Apps',
+        secondaryText: 'Hybrid Applications',
+        icon: <FaMobileAlt/>,
+      },
+      {
+        primaryText: 'APIs',
+        secondaryText: 'Dedicated and serverless APIs',
+        icon: <FaServer/>,
+      },
+    ];
     return (
       <Content className="content">
-        What I did
-        <div> Websites <FaLaptopCode/> Full stack</div>
-        <div> Mobile Apps <FaMobileAlt/> Hybrid Applications</div>
-        <div> APIs <FaServer/> Dedicated and serverless APIs</div>
+        <div>What I did</div>
+        <div>
+          {options.map(this.renderOption)}
+        </div>
       </Content>
     );
   }
