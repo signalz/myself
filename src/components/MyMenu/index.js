@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-// import { Menu, Icon } from 'antd';
-
-import './menu.css';
+import { Menu } from 'antd';
 
 class MyMenu extends Component {
   render() {
     return (
-      <div className="menu">
-        <a href="/">Home</a>
-        <a href="/">CV</a>
-      </div>
+      <Menu
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={['1']}
+        style={{ lineHeight: '64px' }}
+      >
+        <Menu.Item key="1" style={{ width: 100 }}>Home</Menu.Item>
+        <Menu.Item key="2" style={{ width: 100 }}>CV</Menu.Item>
+      </Menu>
     );
   }
 }
