@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
+import { Layout } from 'antd';
 import MyHeader from './components/MyHeader';
 import MyContent from './components/MyContent';
 // import './fonts/Lacquer-Regular.ttf';
-import './App.css'
+import './App.css';
 
-const {
-  Footer,
-} = Layout;
+const { Footer } = Layout;
 
 class App extends Component {
   render() {
     return (
       <Layout>
         <MyHeader />
-        <MyContent/>
-        <Footer style={{ textAlign: 'center', fontFamily: "Lacquer" }}>
+        <MyContent />
+        <Footer style={{ textAlign: 'center', fontFamily: 'Lacquer' }}>
           Ant Design ©2018 Created by Ant UED
         </Footer>
       </Layout>

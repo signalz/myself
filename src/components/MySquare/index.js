@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
 
-import './square.css';
+import "./square.css";
+import PropTypes from "prop-types";
 
 class MySquare extends Component {
   render() {
@@ -19,7 +19,7 @@ class MySquare extends Component {
 MySquare.propTypes = {
   primaryText: PropTypes.string.isRequired,
   secondaryText: PropTypes.string.isRequired,
-  icon: PropTypes.element.isRequired,
+  icon: PropTypes.element.isRequired
 };
 
 export default MySquare;
