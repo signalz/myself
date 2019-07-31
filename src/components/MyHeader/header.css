@@ -1,4 +1,6 @@
 .header {
-    display: flex;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
+  position: fixed;
+  width: 100%;
 }
