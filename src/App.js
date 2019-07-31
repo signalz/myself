@@ -4,6 +4,8 @@ import 'antd/dist/antd.css';
 
 import MyHeader from './components/MyHeader';
 import MyContent from './components/MyContent';
+// import './fonts/Lacquer-Regular.ttf';
+import './App.css'
 
 const {
   Footer,
@@ -15,7 +17,7 @@ class App extends Component {
       <Layout>
         <MyHeader />
         <MyContent/>
-        <Footer style={{ textAlign: 'center' }}>
+        <Footer style={{ textAlign: 'center', fontFamily: "Lacquer" }}>
           Ant Design ©2018 Created by Ant UED
         </Footer>
       </Layout>
