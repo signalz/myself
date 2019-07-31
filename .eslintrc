@@ -16,9 +16,11 @@
       "error",
       {
         "traillingComma": "es5",
-        "singleQuote": true
+        "singleQuote": true,
+        "semi": false
       }
-    ]
+    ],
+    "semi": 0
   },
   "globals": {
     "window": true,
