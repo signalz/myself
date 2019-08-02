@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Layout } from 'antd';
+import React, { Component } from 'react'
+import { Layout } from 'antd'
 
-import MyMenu from '../MyMenu';
+import MyMenu from '../MyMenu'
 
-import './header.css';
+import './header.css'
 
-const { Header } = Layout;
+const { Header } = Layout
 
 class MyHeader extends Component {
   render() {
@@ -13,8 +13,8 @@ class MyHeader extends Component {
       <Header className="header">
         <MyMenu />
       </Header>
-    );
+    )
   }
 }
 
-export default MyHeader;
+export default MyHeader
