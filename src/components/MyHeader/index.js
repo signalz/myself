@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd'
 
-import MyMenu from '../MyMenu'
+import MyMenu from 'components/MyMenu'
 
-import './header.css'
+import './my-header.css'
 
 const { Header } = Layout
 
 class MyHeader extends Component {
   render() {
     return (
-      <Header className="header">
+      <Header className="my-header">
         <MyMenu />
       </Header>
     )

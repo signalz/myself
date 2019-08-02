@@ -16,10 +16,22 @@
 
 .app-layout {
   font-family: "Poppins", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-size: 1rem;
   line-height: 1.5;
   color: #8a8fa3;
   background-color: #fff;
+}
+
+.app-header {
+  box-shadow: 0 0 29px 0 rgba(134, 134, 134, 0.25);
+  padding: 30px 0;
+  background-color: #fff;
+  transition: all 0.3s ease-out 0s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
