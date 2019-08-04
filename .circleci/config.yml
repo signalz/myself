@@ -29,9 +29,12 @@ jobs:
 workflows:
   version: 2
   build_and_push:
-    branches:
-      only:
-        - master
     jobs:
-      - build
-      - push
+      - build:
+          filters:
+            branches:
+              only: master
+      - push:
+          filters:
+            branches:
+              only: master
