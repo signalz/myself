@@ -8,8 +8,8 @@ import 'antd/dist/antd.css'
 import messagesEN from './translations/en.json'
 import messagesVI from './translations/vi.json'
 import MyHeader from './components/MyHeader'
-import MyContent from './components/MyContent'
-import './App.css'
+// import MyContent from './components/MyContent'
+import './App.scss'
 
 // setup react intl
 const { Content, Footer } = Layout

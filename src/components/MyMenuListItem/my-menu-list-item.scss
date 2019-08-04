@@ -1,0 +1,19 @@
+@import "styles/variables.scss";
+
+.my-menu-list-item {
+  position: relative;
+
+  ::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100px;
+    background-color: $primaryColor;
+    left: 50%;
+    top: -50px;
+  }
+}
+
+.active {
+  color: $primaryColor;
+}
