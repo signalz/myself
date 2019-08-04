@@ -29,6 +29,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
-      - run: docker build -t $CIRCLE_SHA1
+      - run: docker build -t $CIRCLE_SHA1 .
       - run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
       - run: docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
