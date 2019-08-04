@@ -9,6 +9,7 @@ jobs:
         - master
     steps:
       - checkout
+      - run: apt-get update
       - run: apt-get install docker-ce docker-ce-cli containerd.io
       - run: npm install
       - run: npm run build
