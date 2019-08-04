@@ -38,9 +38,9 @@ jobs:
       - run: curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
       - run: apt-get update
       - run: apt-get install -y google-cloud-sdk
+      - run: apt-get install kubectl
       - run: |
           echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
           gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
           gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
-      - run: gcloud components install kubectl
       - run: kubectl set image deployment/myself-deployment myself=registry.hub.docker.com/$DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
