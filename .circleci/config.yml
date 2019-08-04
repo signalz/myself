@@ -9,10 +9,29 @@ jobs:
         - master
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies
       - run: apt-get update
       - run: apt-get install docker-ce docker-ce-cli containerd.io
       - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
+  push-images:
+    machine: true
+    requires: build
+    steps:
+      - checkout
       - run: docker build -t ${CIRCLE-SHA1}
       - run: docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}
       - run: docker push ${DOCKER_HUB_USERNAME}/${DOCKER_HUB_APP}:${CIRCLE-SHA1}
+workflows:
+  version: 2
+  build_and_push:
+    jobs:
+      - build
+      - push-images
