@@ -1,11 +1,9 @@
 version: 2
 jobs:
   build:
-    machine:
-      node:
-        version: latest
-    services:
-      - docker
+    machine: true
+    docker:
+      - image: node:latest
     working_directory: ~/myself
     branches:
       only:
