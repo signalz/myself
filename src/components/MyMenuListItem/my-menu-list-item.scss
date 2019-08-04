@@ -1,16 +1,31 @@
 @import "styles/variables.scss";
 
+@mixin vertical-bar {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 70px;
+  background-color: $primaryColor;
+  left: 50%;
+  top: -50px;
+  transition: all 0.3s ease-out 0s;
+}
+
 .my-menu-list-item {
   position: relative;
+  margin-left: 20px;
 
-  ::before {
-    position: absolute;
-    content: "";
-    width: 3px;
-    height: 100px;
-    background-color: $primaryColor;
-    left: 50%;
-    top: -50px;
+  .active-vertical-bar {
+    @include vertical-bar;
+  }
+
+  :hover {
+    cursor: pointer;
+    color: $primaryColor;
+  }
+
+  :hover::before {
+    @include vertical-bar;
   }
 }
 

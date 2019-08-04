@@ -21,7 +21,7 @@ const messages = {
 }
 const App = () => (
   <IntlProvider locale={language} messages={messages[language]}>
-    <Layout className="app-layout" style={{ height: 5000 }}>
+    <Layout className="my-app-layout" style={{ height: 5000 }}>
       <MyHeader />
       <Content style={{ padding: '0 50px' }}>
         <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>

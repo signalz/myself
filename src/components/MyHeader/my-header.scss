@@ -21,12 +21,12 @@ ul {
   list-style-type: none;
 }
 
-div::before {
-  position: absolute;
-  content: "";
-  width: 3px;
-  height: 100px;
-  background-color: $primaryColor;
-  left: 50%;
-  top: -50px;
-}
+// div::before {
+//   position: absolute;
+//   content: "";
+//   width: 3px;
+//   height: 100px;
+//   background-color: $primaryColor;
+//   left: 50%;
+//   top: -50px;
+// }
