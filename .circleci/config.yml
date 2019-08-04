@@ -10,3 +10,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
+      - run: npm run build
+      - run: docker build -t ${CIRCLE-SHA1}
+      - run: docker login -u ${DOCKER_HUB_USERNAME} -p ${DOCKER_HUB_PASSWORD}
+      - run: docker push ${DOCKER_HUB_USERNAME}/${DOCKER_HUB_APP}:${CIRCLE-SHA1}

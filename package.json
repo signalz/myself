@@ -11,11 +11,13 @@
     "react-dom": "^16.6.0",
     "react-icons": "^3.2.2",
     "react-intl": "^2.9.0",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "rimraf": "^2.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rimraf build/* && react-scripts build",
+    "postbuild": "rimraf build/**/*.map",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
