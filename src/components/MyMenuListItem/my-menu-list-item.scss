@@ -4,19 +4,26 @@
   position: absolute;
   content: "";
   width: 3px;
-  height: 70px;
+  height: 0;
   background-color: $primaryColor;
   left: 50%;
   top: -50px;
-  transition: all 0.3s ease-out 0s;
+  transition: all $headerVerticalBarTranstitionTime;
+  -webkit-transition: all $headerVerticalBarTranstitionTime;
 }
 
 .my-menu-list-item {
   position: relative;
   margin-left: 20px;
+  text-transform: uppercase;
+
+  .vertical-bar {
+    @include vertical-bar;
+  }
 
   .active-vertical-bar {
     @include vertical-bar;
+    height: $headerVerticalBarHeight;
   }
 
   :hover {
@@ -24,8 +31,13 @@
     color: $primaryColor;
   }
 
+  ::before {
+    @include vertical-bar;
+  }
+
   :hover::before {
     @include vertical-bar;
+    height: $headerVerticalBarHeight;
   }
 }
 

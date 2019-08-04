@@ -9,7 +9,9 @@ const MyMenuListItem = ({ item, active, onClickHandler }) => (
     className={classNames('my-menu-list-item', { active })}
     onClick={onClickHandler(item.value)}
   >
-    {active && <div className="active-vertical-bar" />}
+    <div
+      className={classNames(active ? 'active-vertical-bar' : 'vertical-bar')}
+    />
     <div>{item.label}</div>
   </div>
 )
