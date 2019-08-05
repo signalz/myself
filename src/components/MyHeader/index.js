@@ -10,7 +10,7 @@ const { Header } = Layout;
 
 class MyHeader extends Component {
   state = {
-    activeItem: "services"
+    activeItem: "home"
   };
 
   onClickItemHandler = value => () => this.setState({ activeItem: value });
