@@ -3,6 +3,8 @@ jobs:
   build_and_push:
     docker:
       - image: node:latest
+    branches:
+      only: master
     working_directory: ~/myself
     steps:
       - checkout
