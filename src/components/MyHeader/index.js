@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import { Layout } from "antd";
+import React, { Component } from 'react'
+import { Layout } from 'antd'
 
-import MyMenuList from "components/MyMenuList";
-import { MY_MENU_OPTIONS } from "constants.js";
+import MyMenuList from 'components/MyMenuList'
+import { MY_MENU_OPTIONS } from 'constants.js'
 
-import "./my-header.scss";
+import './my-header.scss'
 
-const { Header } = Layout;
+const { Header } = Layout
 
 class MyHeader extends Component {
   state = {
-    activeItem: "home"
-  };
+    activeItem: 'home'
+  }
 
-  onClickItemHandler = value => () => this.setState({ activeItem: value });
+  onClickItemHandler = value => () => this.setState({ activeItem: value })
 
   render() {
-    const { activeItem } = this.state;
+    const { activeItem } = this.state
     return (
       <Header className="my-header">
         <MyMenuList
@@ -25,8 +25,8 @@ class MyHeader extends Component {
           onClickItemHandler={this.onClickItemHandler}
         />
       </Header>
-    );
+    )
   }
 }
 
-export default MyHeader;
+export default MyHeader

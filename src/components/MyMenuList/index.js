@@ -28,7 +28,7 @@ MyMenuList.propTypes = {
   activeItem: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      label: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
       value: PropTypes.string.isRequired
     })
   ).isRequired,

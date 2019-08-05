@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 import './my-menu-list-item.scss'
 
@@ -12,14 +13,16 @@ const MyMenuListItem = ({ item, active, onClickHandler }) => (
     <div
       className={classNames(active ? 'active-vertical-bar' : 'vertical-bar')}
     />
-    <div>{item.label}</div>
+    <div>
+      <FormattedMessage id={item.id} defaultMessage={item.value} />
+    </div>
   </div>
 )
 
 MyMenuListItem.propTypes = {
   active: PropTypes.bool,
   item: PropTypes.shape({
-    label: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired
   }).isRequired,
   onClickHandler: PropTypes.func.isRequired
