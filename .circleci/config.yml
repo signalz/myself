@@ -33,6 +33,8 @@ jobs:
       - run: docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
       - run: curl -L "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-$GOOGLE_CLOUD_SDK_VERSION-linux-x86_64.tar.gz" | tar xz
       - run: CLOUDSDK_CORE_DISABLE_PROMPTS=1 ./google-cloud-sdk/install.sh
+      - run: source '/root/myself/google-cloud-sdk/completion.bash.inc'
+      - run: source '/root/myself/google-cloud-sdk/path.bash.inc'
       - run: |
           echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
           gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
