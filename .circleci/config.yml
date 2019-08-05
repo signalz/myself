@@ -1,10 +1,11 @@
 version: 2
 jobs:
-  build_and_push:
+  build:
     docker:
       - image: node:latest
     branches:
-      only: master
+      only:
+        - master
     working_directory: ~/myself
     steps:
       - checkout
@@ -31,28 +32,15 @@ jobs:
       - run: docker build -t $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1 .
       - run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
       - run: docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
-  deploy:
-    docker:
-      - image: google/cloud-sdk
-    working_directory: ~/myself
-    steps:
+      - run: apt-get update
+      - run: echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+      - run: apt-get install -y apt-transport-https ca-certificates
+      - run: curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+      - run: apt-get update
+      - run: apt-get install -y google-cloud-sdk
+      - run: apt-get install kubectl
       - run: |
           echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
           gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
           gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
-      - run: gcloud components install kubectl
       - run: kubectl set image deployment/myself-deployment myself=registry.hub.docker.com/$DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
-workflows:
-  version: 2
-  google_cloud:
-    jobs:
-      - build_and_push:
-          filters:
-            branches:
-              only: master
-      - deploy:
-          filters:
-              branches:
-                only: master
-          requires:
-            - build_and_push
