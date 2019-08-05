@@ -7,37 +7,34 @@ jobs:
       only: master
     working_directory: ~/myself
     steps:
-      # - checkout
-      # - setup_remote_docker:
-      #     docker_layer_caching: true
-      # - run:
-      #     name: Install Docker client
-      #     command: |
-      #       set -x
-      #       VER="latest"
-      #       curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
-      #       tar -xz -C /tmp -f /tmp/docker-$VER.tgz
-      #       mv /tmp/docker/* /usr/bin
-      # - restore_cache:
-      #     keys:
-      #       - v1-dependencies-{{ checksum "package.json" }}
-      #       - v1-dependencies
-      # - run: npm install
-      # - save_cache:
-      #     paths:
-      #       - node_modules
-      #     key: v1-dependencies-{{ checksum "package.json" }}
-      # - run: npm run build
-      # - run: docker build -t $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1 .
-      # - run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
-      # - run: docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Install Docker client
+          command: |
+            set -x
+            VER="latest"
+            curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz
+            tar -xz -C /tmp -f /tmp/docker-$VER.tgz
+            mv /tmp/docker/* /usr/bin
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run build
+      - run: docker build -t $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1 .
+      - run: docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD
+      - run: docker push $DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
       - run: curl -L "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-$GOOGLE_CLOUD_SDK_VERSION-linux-x86_64.tar.gz" | tar xz
       - run: CLOUDSDK_CORE_DISABLE_PROMPTS=1 ./google-cloud-sdk/install.sh
       - run: echo $GCLOUD_SERVICE_KEY | /root/myself/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file=-
       - run: /root/myself/google-cloud-sdk/bin/gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
       - run: /root/myself/google-cloud-sdk/bin/gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
       - run: /root/myself/google-cloud-sdk/bin/gcloud --quiet components install kubectl
-      - run: ls -la /root/myself/google-cloud-sdk
-      - run: ls -la /root/myself/google-cloud-sdk/bin
-      - run: ls -la /root/myself/
-      - run: kubectl set image deployment/myself-deployment myself=registry.hub.docker.com/$DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
+      - run: /root/myself/google-cloud-sdk/bin/kubectl set image deployment/myself-deployment myself=registry.hub.docker.com/$DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
