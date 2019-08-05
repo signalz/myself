@@ -35,8 +35,8 @@ jobs:
       - run: CLOUDSDK_CORE_DISABLE_PROMPTS=1 ./google-cloud-sdk/install.sh
       - run: cd ./google-cloud-sdk/bin
       - run: |
-          echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
-          gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-          gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
-      - run: gcloud components install kubectl
+          echo $GCLOUD_SERVICE_KEY | ./gcloud auth activate-service-account --key-file=-
+          ./gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+          ./gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
+      - run: ./gcloud components install kubectl
       - run: kubectl set image deployment/myself-deployment myself=registry.hub.docker.com/$DOCKER_HUB_USERNAME/$DOCKER_HUB_APP:$CIRCLE_SHA1
