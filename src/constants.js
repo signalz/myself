@@ -4,4 +4,4 @@ export const MY_MENU_OPTIONS = [
   { value: 'contact', id: 'app.mymenu.contact' }
 ]
 
-export const OTHER = {}
+export const PIVOT_WIDTH = 992
