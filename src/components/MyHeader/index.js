@@ -6,6 +6,7 @@ import MyMenuList from 'components/MyMenuList'
 import { MY_MENU_OPTIONS, PIVOT_WIDTH } from 'constants.js'
 
 import './my-header.scss'
+import icon from './icon.png'
 
 const { Header } = Layout
 
@@ -31,6 +32,7 @@ class MyHeader extends Component {
           {matches =>
             matches ? (
               <>
+                <img src={icon} alt="my-icon" />
                 <div>Ngoc Son</div>
                 <MyMenuList
                   items={MY_MENU_OPTIONS}
