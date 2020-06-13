@@ -1,0 +1,55 @@
+@import "styles/variables.scss";
+
+.my-content {
+  padding: $headerHeight 0;
+
+  .my-banner {
+    background: #f1f1f1;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .my-description {
+      padding-top: 20%;
+      margin-left: 10%;
+
+      .my-hello-subtitle {
+        font-size: 30px;
+        color: $primaryColor;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+      }
+
+      .my-description-title {
+        font-size: 60px;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        color: #32333c;
+      }
+
+      .my-description-footer{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        margin: 0px;
+      }
+    }
+
+    .my-social-bar {
+      display: flex;
+      align-items: center;
+      padding-bottom: 5%;
+
+      .bar {
+        border: 2px solid $primaryColor;
+        height: 2px;
+        width: 30%;
+      }
+
+      .my-social-icons {
+        margin-left: 20px;
+      }
+    }
+  }
+}
