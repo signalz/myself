@@ -1,12 +1,11 @@
 import { Layout } from 'antd'
-// import classNames from 'classnames'
 import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
-// import { FormattedMessage } from 'react-intl'
 
 import logo from 'assets/logo.png'
 import MyLogo from 'components/MyLogo'
 import MyMenuButton from 'components/MyMenuButton'
+import MyMenuDropDownList from 'components/MyMenuDropDownList'
 import MyMenuList from 'components/MyMenuList'
 import { MY_MENU_OPTIONS, MY_NAME, TABLET_WIDTH } from 'constants.js'
 
@@ -17,37 +16,49 @@ const { Header } = Layout
 class MyHeader extends Component {
   state = {
     activeItem: 'home',
-    active: false,
+    activeMenuButton: false,
   }
 
-  onClickItemHandler = value => () => this.setState({ activeItem: value })
+  onClickItemHandler = value => () => {
+    this.setState({ activeItem: value, activeMenuButton: false })
+  }
 
   onClickMenuButtonHandler = () => {
-    const { active } = this.state
-    this.setState({ active: !active })
+    const { activeMenuButton } = this.state
+    this.setState({ activeMenuButton: !activeMenuButton })
   }
 
   render() {
-    const { activeItem, active } = this.state
+    const { activeItem, activeMenuButton } = this.state
     return (
-      <Header className="my-header">
-        <MyLogo logo={logo} name={MY_NAME} />
-        <MediaQuery minWidth={TABLET_WIDTH}>
-          {matches =>
-            matches ? (
-              <>
-                <MyMenuList
+      <MediaQuery minWidth={TABLET_WIDTH}>
+        {matches =>
+          matches ? (
+            <Header className="my-header">
+              <MyLogo logo={logo} name={MY_NAME} />
+              <MyMenuList
+                items={MY_MENU_OPTIONS}
+                activeItem={activeItem}
+                onClickItemHandler={this.onClickItemHandler}
+              />
+            </Header>
+          ) : (
+            <>
+              <Header className="my-header">
+                <MyLogo logo={logo} name={MY_NAME} />
+                <MyMenuButton active={activeMenuButton} onClick={this.onClickMenuButtonHandler} />
+              </Header>
+              {activeMenuButton && (
+                <MyMenuDropDownList
                   items={MY_MENU_OPTIONS}
                   activeItem={activeItem}
                   onClickItemHandler={this.onClickItemHandler}
                 />
-              </>
-            ) : (
-              <MyMenuButton active={active} onClick={this.onClickMenuButtonHandler} />
-            )
-          }
-        </MediaQuery>
-      </Header>
+              )}
+            </>
+          )
+        }
+      </MediaQuery>
     )
   }
 }

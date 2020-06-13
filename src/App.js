@@ -17,16 +17,14 @@ addLocaleData([...localeEN, ...localeVI])
 const language = navigator.language.split(/[-_]/)[0]
 const messages = {
   vi: messagesVI,
-  en: messagesEN
+  en: messagesEN,
 }
 const App = () => (
   <IntlProvider locale={language} messages={messages[language]}>
     <Layout className="my-app-layout" style={{ height: 5000 }}>
       <MyHeader />
       <Content style={{ padding: '0 50px' }}>
-        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-          Content
-        </div>
+        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>
         <FormattedMessage id="app.footer" />
