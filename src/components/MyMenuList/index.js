@@ -29,10 +29,10 @@ MyMenuList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired
-    })
+      value: PropTypes.string.isRequired,
+    }),
   ).isRequired,
-  onClickItemHandler: PropTypes.func.isRequired
+  onClickItemHandler: PropTypes.func.isRequired,
 }
 
 export default MyMenuList

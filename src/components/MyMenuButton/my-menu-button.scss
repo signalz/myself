@@ -1,0 +1,42 @@
+@import "styles/variables.scss";
+
+button {
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+
+  .button-bar {
+    width: 30px;
+    height: 2px;
+    background-color: $defaultColor;
+    margin: 5px 0;
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+
+  .button-bar.active:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 7px;
+  }
+
+  .button-bar.active:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .button-bar.active:nth-of-type(3) {
+    transform: rotate(135deg);
+    top: -7px
+  }
+}
+
+button:focus {
+  outline: none;
+}

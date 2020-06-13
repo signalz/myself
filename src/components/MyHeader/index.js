@@ -1,39 +1,41 @@
-import { Layout, Menu, Dropdown, Icon } from 'antd'
+import { Layout } from 'antd'
+// import classNames from 'classnames'
 import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
+// import { FormattedMessage } from 'react-intl'
 
+import logo from 'assets/logo.png'
+import MyLogo from 'components/MyLogo'
+import MyMenuButton from 'components/MyMenuButton'
 import MyMenuList from 'components/MyMenuList'
-import { MY_MENU_OPTIONS, PIVOT_WIDTH } from 'constants.js'
+import { MY_MENU_OPTIONS, MY_NAME, TABLET_WIDTH } from 'constants.js'
 
 import './my-header.scss'
-import icon from './icon.png'
 
 const { Header } = Layout
 
 class MyHeader extends Component {
   state = {
-    activeItem: 'home'
+    activeItem: 'home',
+    active: false,
   }
 
   onClickItemHandler = value => () => this.setState({ activeItem: value })
 
+  onClickMenuButtonHandler = () => {
+    const { active } = this.state
+    this.setState({ active: !active })
+  }
+
   render() {
-    const { activeItem } = this.state
-    const menu = (
-      <Menu>
-        <Menu.Item>
-          <div>1st menu item</div>
-        </Menu.Item>
-      </Menu>
-    )
+    const { activeItem, active } = this.state
     return (
       <Header className="my-header">
-        <MediaQuery minWidth={PIVOT_WIDTH}>
+        <MyLogo logo={logo} name={MY_NAME} />
+        <MediaQuery minWidth={TABLET_WIDTH}>
           {matches =>
             matches ? (
               <>
-                <img src={icon} alt="my-icon" />
-                <div>Ngoc Son</div>
                 <MyMenuList
                   items={MY_MENU_OPTIONS}
                   activeItem={activeItem}
@@ -41,11 +43,7 @@ class MyHeader extends Component {
                 />
               </>
             ) : (
-              <Dropdown overlay={menu}>
-                <div>
-                  Hover me <Icon type="down" />
-                </div>
-              </Dropdown>
+              <MyMenuButton active={active} onClick={this.onClickMenuButtonHandler} />
             )
           }
         </MediaQuery>
