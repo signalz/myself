@@ -2,7 +2,10 @@
   "app.mymenu.home": "Home",
   "app.mymenu.services": "Services",
   "app.mymenu.contact": "Contact",
-  "app.mymenu.myname": "Ngoc Son",
+  "app.mymenu.myname": "Son Nguyen",
+  "app.mybanner.hello": "Hello I'm",
+  "app.mybanner.myname": "Son Nguyen",
+  "app.mybanner.mytitle": "An experienced fullstack developer",
   "app.footer": "NNS",
   "app.learn-react-link": "Learn React."
 }

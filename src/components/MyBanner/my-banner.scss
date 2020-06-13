@@ -1,0 +1,80 @@
+@import 'styles/variables.scss';
+
+.my-banner {
+  background: #f1f1f1;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (max-width: $desktopWith) {
+    .my-banner-left {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $desktopWith) {
+    .my-banner-left {
+      width: 60%;
+    }
+  }
+
+  .my-banner-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+
+    .my-description {
+      padding-top: 100px;
+      margin-left: 10%;
+
+      .my-hello-subtitle {
+        font-size: 30px;
+        color: $primaryColor;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+      }
+
+      .my-description-title {
+        font-size: 60px;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        color: #32333c;
+      }
+
+      .my-description-footer {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        margin: 0px;
+      }
+    }
+
+    .my-social-bar {
+      display: flex;
+      align-items: center;
+      padding-bottom: 30px;
+
+      .bar {
+        border: 2px solid $primaryColor;
+        height: 2px;
+        width: 100px;
+      }
+
+      .my-social-icons {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .my-banner-right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 70%;
+    }
+  }
+}
