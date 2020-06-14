@@ -21,6 +21,7 @@ class MyHeader extends Component {
 
   onClickItemHandler = value => () => {
     this.setState({ activeItem: value, activeMenuButton: false })
+    window.location = `#${value}`
   }
 
   onClickMenuButtonHandler = () => {

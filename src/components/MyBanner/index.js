@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { FormattedMessage } from 'react-intl'
 import MediaQuery from 'react-responsive'
@@ -18,8 +19,9 @@ class MyBanner extends Component {
   renderSocialItem = item => <MySocialLogo url={item.url} icon={item.icon} key={item.url} />
 
   render() {
+    const { id } = this.props
     return (
-      <div className="my-banner">
+      <div id={id} className="my-banner">
         <div className="my-banner-left">
           <div className="my-description">
             <div className="my-hello-subtitle">
@@ -51,6 +53,10 @@ class MyBanner extends Component {
       </div>
     )
   }
+}
+
+MyBanner.propTypes = {
+  id: PropTypes.string.isRequired,
 }
 
 export default MyBanner

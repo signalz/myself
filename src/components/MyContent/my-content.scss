@@ -1,6 +1,37 @@
 @import 'styles/variables.scss';
 
 .my-content {
-  padding: $headerHeight 0;
+  padding: 0;
   min-width: $minWidth;
+
+  @media screen and (min-width: $desktopWith) {
+    .my-about {
+      max-width: 952px;
+    }
+  }
+
+  @media screen and (min-width: $tabletWidth) {
+    .my-about {
+      max-width: 728px;
+    }
+  }
+
+  .my-about {
+    padding-top: $headerHeight;
+    padding-left: 20px;
+    padding-right: 20px;
+    // width: 200px;
+
+    .my-about-me {
+      text-align: center;
+      font-weight: 700;
+      font-size: 45px;
+      color: #000;
+      padding-bottom: 20px;
+    }
+
+    .my-about-hello {
+
+    }
+  }
 }

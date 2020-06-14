@@ -1,5 +1,6 @@
 export const MY_MENU_OPTIONS = [
   { value: 'home', id: 'app.mymenu.home' },
+  { value: 'about', id: 'app.mymenu.about' },
   { value: 'services', id: 'app.mymenu.services' },
   { value: 'contact', id: 'app.mymenu.contact' },
 ]
@@ -34,6 +35,15 @@ export const MY_SOCIAL_LINKS_CONFIG = [
   { url: 'https://www.linkedin.com/in/ngoc-son-nguyen-736b90126', type: MY_SOCIAL_TYPES.LINKEDIN },
   { url: 'https://twitter.com/signsz', type: MY_SOCIAL_TYPES.TWITTER },
 ]
+
+export const SECTIONS = {
+  HOME: {
+    id: 'home',
+  },
+  ABOUT: {
+    id: 'about',
+  },
+}
 
 export const DESKTOP_WIDTH = 992
 export const TABLET_WIDTH = 768

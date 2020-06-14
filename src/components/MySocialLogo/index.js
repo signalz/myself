@@ -5,14 +5,14 @@ import React from 'react'
 import './my-social-logo.scss'
 
 const MySocialLogo = ({ url, icon }) => (
-  <a href={url}>
+  <a href={url} className="my-social-icon-wrapper">
     <Icon component={icon} className="my-social-icon" />
   </a>
 )
 
 MySocialLogo.propTypes = {
   url: PropTypes.string.isRequired,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.func.isRequired,
 }
 
 export default MySocialLogo
