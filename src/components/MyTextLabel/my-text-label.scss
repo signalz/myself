@@ -1,0 +1,29 @@
+@import 'styles/variables.scss';
+
+.my-text-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  min-width: 335px;
+
+  .my-text-label-icon {
+    font-size: 15px;
+    color: $primaryColor;
+    width: 15px;
+  }
+
+  .my-text-label-label {
+    color: #32333c;
+    font-size: 15px;
+    margin-left: 13px;
+  }
+
+  .my-text-label-value {
+    font-weight: 400;
+    line-height: 28px;
+    color: $defaultColor;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+}

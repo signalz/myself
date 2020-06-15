@@ -20,7 +20,8 @@
     padding-top: $headerHeight;
     padding-left: 20px;
     padding-right: 20px;
-    // width: 200px;
+    margin: auto;
+    min-width: $minWidth;
 
     .my-about-me {
       text-align: center;
@@ -31,7 +32,23 @@
     }
 
     .my-about-hello {
+      font-size: 18px;
+      font-weight: 500;
+      padding-bottom: 15px;
+      color: #32333c
+    }
 
+    .my-about-description {
+      font-weight: 400;
+      line-height: 28px;
+      color: $defaultColor;
+      padding-bottom: 15px;
+    }
+
+    .my-label-items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 }

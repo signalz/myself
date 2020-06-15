@@ -36,6 +36,36 @@ export const MY_SOCIAL_LINKS_CONFIG = [
   { url: 'https://twitter.com/signsz', type: MY_SOCIAL_TYPES.TWITTER },
 ]
 
+export const MY_LABEL_TYPES = {
+  BIRTHDAY: 'birthday',
+  PHONE: 'phone',
+  EMAIL: 'email',
+  LOCATION: 'location',
+}
+
+export const MY_LABEL_CONFIG = [
+  {
+    type: MY_LABEL_TYPES.BIRTHDAY,
+    label: 'app.myabout.birthday.label',
+    value: 'app.myabout.birthday.value',
+  },
+  {
+    type: MY_LABEL_TYPES.PHONE,
+    label: 'app.myabout.phone.label',
+    value: 'app.myabout.phone.value',
+  },
+  {
+    type: MY_LABEL_TYPES.EMAIL,
+    label: 'app.myabout.email.label',
+    value: 'app.myabout.email.value',
+  },
+  {
+    type: MY_LABEL_TYPES.LOCATION,
+    label: 'app.myabout.location.label',
+    value: 'app.myabout.location.value',
+  },
+]
+
 export const SECTIONS = {
   HOME: {
     id: 'home',
@@ -44,6 +74,13 @@ export const SECTIONS = {
     id: 'about',
   },
 }
+
+export const MY_SKILLS = [
+  { label: 'app.myskills.html.label', value: 'app.myskills.html.value', width: '90%' },
+  { label: 'app.myskills.fe.label', value: 'app.myskills.fe.value', width: '90%' },
+  { label: 'app.myskills.be.label', value: 'app.myskills.be.value', width: '60%' },
+  { label: 'app.myskills.mobile.label', value: 'app.myskills.mobile.value', width: '70%' },
+]
 
 export const DESKTOP_WIDTH = 992
 export const TABLET_WIDTH = 768

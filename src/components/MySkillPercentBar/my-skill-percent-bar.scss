@@ -1,0 +1,24 @@
+@import 'styles/variables.scss';
+
+.my-skill-percent-bar {
+  .my-skill-header {
+    font-size: 16px;
+    font-weight: 400;
+    color: #32333c;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .my-skill-bar-wrapper {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+
+    .my-skill-bar {
+      height: 5px;
+      border-radius: 5px;
+      background-color: $primaryColor;
+      }
+  }
+}
