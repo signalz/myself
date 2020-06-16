@@ -4,15 +4,92 @@
   padding: 0;
   min-width: $minWidth;
 
-  @media screen and (min-width: $desktopWith) {
+  .my-services {
+    padding-top: $headerHeight;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    min-width: $minWidth;
+    background: #fbfbfb;
+
+    .my-services-header {
+      text-align: center;
+      font-weight: 700;
+      font-size: 45px;
+      color: #000;
+      padding-bottom: 20px;
+    }
+
+    .my-services-list {
+      .my-services-item {
+        background-color: #fff;
+        border: 1px solid #eceff8;
+        border-radius: 5px;
+        padding: 25px;
+        min-width: $minWidth;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .my-services-item-icon {
+          color: $primaryColor;
+          width: 60px;
+          margin-bottom: 20px;
+        }
+
+        .my-services-item-header {
+          font-size: 22px;
+          font-weight: 600;
+          color: #32333c;
+          margin-bottom: 20px;
+        }
+
+        .my-services-item-description {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 28px;
+          color: #8a8fa3;
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tabletWidth) {
     .my-about {
-      max-width: 952px;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      .my-description-skils {
+        .my-description-skils-left {
+          width: 100% !important;
+        }
+
+        .my-description-skils-right {
+          width: 100% !important;
+          min-height: 200px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $phoneWidth) {
+    .my-about {
+      max-width: 720px;
     }
   }
 
   @media screen and (min-width: $tabletWidth) {
     .my-about {
-      max-width: 728px;
+      max-width: 960px;
+    }
+  }
+
+  @media screen and (min-width: $desktopWidth) {
+    .my-about {
+      max-width: 1140px;
     }
   }
 
@@ -31,24 +108,45 @@
       padding-bottom: 20px;
     }
 
-    .my-about-hello {
-      font-size: 18px;
-      font-weight: 500;
-      padding-bottom: 15px;
-      color: #32333c
-    }
-
-    .my-about-description {
-      font-weight: 400;
-      line-height: 28px;
-      color: $defaultColor;
-      padding-bottom: 15px;
-    }
-
-    .my-label-items {
+    .my-description-skils {
+      width: 100%;
+      padding: 20px;
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
+
+      .my-description-skils-left {
+        width: 50%;
+        min-width: $minWidth;
+
+        .my-about-hello {
+          font-size: 18px;
+          font-weight: 500;
+          padding-bottom: 15px;
+          color: #32333c;
+        }
+
+        .my-about-description {
+          font-weight: 400;
+          line-height: 28px;
+          color: $defaultColor;
+          padding-bottom: 15px;
+        }
+
+        .my-label-items {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+        }
+      }
+
+      .my-description-skils-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: $minWidth;
+      }
     }
   }
 }

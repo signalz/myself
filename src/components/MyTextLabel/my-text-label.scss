@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   width: 50%;
-  min-width: 335px;
+  min-width: $minWidth;
 
   .my-text-label-icon {
     font-size: 15px;
@@ -24,6 +24,6 @@
     line-height: 28px;
     color: $defaultColor;
     margin-left: 5px;
-    font-size: 15px;
+    font-size: 14px;
   }
 }

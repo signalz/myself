@@ -8,13 +8,13 @@
   justify-content: space-between;
   padding-top: $headerHeight;
 
-  @media screen and (max-width: $desktopWith) {
+  @media screen and (max-width: $desktopWidth) {
     .my-banner-left {
       width: 100%;
     }
   }
 
-  @media screen and (min-width: $desktopWith) {
+  @media screen and (min-width: $desktopWidth) {
     .my-banner-left {
       width: 60%;
     }
