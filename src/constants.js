@@ -112,6 +112,30 @@ export const MY_SERVICES_CONFIG = [
   },
 ]
 
+export const MY_CONTACT_TYPES = {
+  LOCATION: 'location',
+  PHONE: 'phone',
+  EMAIL: 'email',
+}
+
+export const MY_CONTACT_CONFIG = [
+  {
+    type: MY_CONTACT_TYPES.LOCATION,
+    label: 'app.mycontact.location.label',
+    description: 'app.mycontact.location.description',
+  },
+  {
+    type: MY_CONTACT_TYPES.PHONE,
+    label: 'app.mycontact.phone.label',
+    description: 'app.mycontact.phone.description',
+  },
+  {
+    type: MY_CONTACT_TYPES.EMAIL,
+    label: 'app.mycontact.email.label',
+    description: 'app.mycontact.email.description',
+  },
+]
+
 export const MY_CV_URL = 'https://drive.google.com/file/d/1Ft2nSHUmsgP9LxBcV9_mD8vXoWoUUfSf/view'
 
 export const DESKTOP_WIDTH = 992

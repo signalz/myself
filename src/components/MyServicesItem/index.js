@@ -14,8 +14,6 @@ const MyServicesItem = ({ icon, label, description }) => (
     <div className="my-services-item-description">
       <FormattedMessage id={description} defaultMessage={description} />
     </div>
-    {/* <div className="my-services-item-header">Websites</div>
-    <div className="my-services-item-description">Front end or full stack</div> */}
   </div>
 )
 

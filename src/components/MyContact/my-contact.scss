@@ -1,6 +1,6 @@
 @import 'styles/variables.scss';
 
-.my-services {
+.my-contact {
   padding-top: $headerHeight;
   padding-left: 20px;
   padding-right: 20px;
@@ -9,7 +9,7 @@
   min-width: $minWidth;
   background: #fbfbfb;
 
-  .my-services-header {
+  .my-contact-header {
     text-align: center;
     font-weight: 700;
     font-size: 45px;
@@ -17,7 +17,7 @@
     padding-bottom: 20px;
   }
 
-  .my-services-list {
+  .my-contact-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

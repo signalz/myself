@@ -35,6 +35,13 @@
   "app.myservices.api.description": "Hybrid application",
   "app.myad.question": "Have any project on mind?",
   "app.myad.link": "Get my cv",
+  "app.mycontact.header": "Get In Touch",
+  "app.mycontact.location.label": "Address",
+  "app.mycontact.location.description": "410 Hoang Hoa Tham, Hanoi, Vietnam",
+  "app.mycontact.phone.label": "Phone",
+  "app.mycontact.phone.description": "+84 988 426 014",
+  "app.mycontact.email.label": "Email",
+  "app.mycontact.email.description": "nguyenngocson4391@gmail.com",
   "app.footer": "NNS",
   "app.learn-react-link": "Learn React."
 }

@@ -1,4 +1,4 @@
-import { MY_SOCIAL_TYPES, MY_LABEL_TYPES, MY_SERVICE_TYPES } from 'constants.js'
+import { MY_SOCIAL_TYPES, MY_LABEL_TYPES, MY_SERVICE_TYPES, MY_CONTACT_TYPES } from 'constants.js'
 import FacebookIcon from 'components/svg/facebook'
 import GithubIcon from 'components/svg/github'
 import LinkedinIcon from 'components/svg/linkedin'
@@ -24,10 +24,13 @@ export function getIcon(type) {
     case MY_LABEL_TYPES.BIRTHDAY:
       return BirthdayIcon
     case MY_LABEL_TYPES.PHONE:
+    case MY_CONTACT_TYPES.PHONE:
       return PhoneIcon
     case MY_LABEL_TYPES.EMAIL:
+    case MY_CONTACT_TYPES.EMAIL:
       return EmailIcon
     case MY_LABEL_TYPES.LOCATION:
+    case MY_CONTACT_TYPES.LOCATION:
       return LocationIcon
     case MY_SERVICE_TYPES.DESKTOP:
       return DesktopIcon
