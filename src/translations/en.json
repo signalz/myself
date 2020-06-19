@@ -26,6 +26,13 @@
   "app.myskills.be.value": "60%",
   "app.myskills.mobile.label": "Mobile App (React Native)",
   "app.myskills.mobile.value": "70%",
+  "app.myservices.header": "My Services",
+  "app.myservices.desktop.label": "Websites",
+  "app.myservices.desktop.description": "Front end or full stack",
+  "app.myservices.mobile.label": "APIs",
+  "app.myservices.mobile.description": "Dedicated and serverless APIs",
+  "app.myservices.api.label": "Mobile",
+  "app.myservices.api.description": "Hybrid application",
   "app.footer": "NNS",
   "app.learn-react-link": "Learn React."
 }

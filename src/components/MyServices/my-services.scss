@@ -1,0 +1,26 @@
+@import 'styles/variables.scss';
+
+.my-services {
+  padding-top: $headerHeight;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+  min-width: $minWidth;
+  background: #fbfbfb;
+
+  .my-services-header {
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    color: #000;
+    padding-bottom: 20px;
+  }
+
+  .my-services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+}

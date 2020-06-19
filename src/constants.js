@@ -73,6 +73,12 @@ export const SECTIONS = {
   ABOUT: {
     id: 'about',
   },
+  SERVICES: {
+    id: 'services',
+  },
+  CONTACT: {
+    id: 'contact',
+  },
 }
 
 export const MY_SKILLS = [
@@ -80,6 +86,30 @@ export const MY_SKILLS = [
   { label: 'app.myskills.fe.label', value: 'app.myskills.fe.value', width: '90%' },
   { label: 'app.myskills.be.label', value: 'app.myskills.be.value', width: '60%' },
   { label: 'app.myskills.mobile.label', value: 'app.myskills.mobile.value', width: '70%' },
+]
+
+export const MY_SERVICE_TYPES = {
+  DESKTOP: 'desktop',
+  API: 'api',
+  MOBILE: 'mobile',
+}
+
+export const MY_SERVICES_CONFIG = [
+  {
+    type: MY_SERVICE_TYPES.DESKTOP,
+    label: 'app.myservices.desktop.label',
+    description: 'app.myservices.desktop.description',
+  },
+  {
+    type: MY_SERVICE_TYPES.API,
+    label: 'app.myservices.api.label',
+    description: 'app.myservices.api.description',
+  },
+  {
+    type: MY_SERVICE_TYPES.MOBILE,
+    label: 'app.myservices.mobile.label',
+    description: 'app.myservices.mobile.description',
+  },
 ]
 
 export const DESKTOP_WIDTH = 992

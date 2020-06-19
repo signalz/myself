@@ -1,0 +1,42 @@
+@import 'styles/variables.scss';
+
+.my-services-item {
+  background-color: #fff;
+  border: 1px solid #eceff8;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  height: 280px;
+  margin: 10px;
+
+  .my-services-item-icon {
+    color: $primaryColor;
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .my-services-item-header {
+    font-size: 22px;
+    font-weight: 600;
+    color: #32333c;
+    margin-bottom: 20px;
+  }
+
+  .my-services-item-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #8a8fa3;
+    margin: 0px;
+  }
+}
+
+.my-services-item:hover {
+  -webkit-box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
+  -moz-box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
+  box-shadow: 0px 0px 21px 0px rgba(152, 152, 152, 0.23);
+}
