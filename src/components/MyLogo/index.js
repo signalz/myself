@@ -17,12 +17,12 @@ MyLogo.propTypes = {
   logo: PropTypes.string,
   name: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired
-  }).isRequired
+    value: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 MyLogo.defaultProps = {
-  logo: ''
+  logo: '',
 }
 
 export default MyLogo

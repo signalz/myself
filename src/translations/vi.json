@@ -33,6 +33,8 @@
   "app.myservices.mobile.description": "Dedicated and serverless APIs",
   "app.myservices.api.label": "Mobile",
   "app.myservices.api.description": "Hybrid application",
+  "app.myad.question": "Have any project on mind?",
+  "app.myad.link": "Get my cv",
   "app.footer": "NNS",
   "app.learn-react-link": "Learn React."
 }

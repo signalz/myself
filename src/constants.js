@@ -112,5 +112,7 @@ export const MY_SERVICES_CONFIG = [
   },
 ]
 
+export const MY_CV_URL = 'https://drive.google.com/file/d/1Ft2nSHUmsgP9LxBcV9_mD8vXoWoUUfSf/view'
+
 export const DESKTOP_WIDTH = 992
 export const TABLET_WIDTH = 768
