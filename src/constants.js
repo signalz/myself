@@ -128,11 +128,13 @@ export const MY_CONTACT_CONFIG = [
     type: MY_CONTACT_TYPES.PHONE,
     label: 'app.mycontact.phone.label',
     description: 'app.mycontact.phone.description',
+    url: 'tel:+84988426014',
   },
   {
     type: MY_CONTACT_TYPES.EMAIL,
     label: 'app.mycontact.email.label',
     description: 'app.mycontact.email.description',
+    url: 'mailto:nguyenngocson4391@gmail.com',
   },
 ]
 

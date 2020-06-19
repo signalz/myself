@@ -21,5 +21,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    .my-contact-link-wrapper:hover{
+      border: none;
+      background: none;
+    }
   }
 }

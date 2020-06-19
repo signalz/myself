@@ -14,14 +14,24 @@ const contacts = MY_CONTACT_CONFIG.map(item => ({
 }))
 
 class MyContact extends Component {
-  renderContactItem = item => (
-    <MyServicesItem
-      icon={item.icon}
-      key={item.type}
-      label={item.label}
-      description={item.description}
-    />
-  )
+  renderContactItem = item =>
+    item.url ? (
+      <a href={item.url} key={item.type} className="my-contact-link-wrapper">
+        <MyServicesItem
+          icon={item.icon}
+          key={item.type}
+          label={item.label}
+          description={item.description}
+        />
+      </a>
+    ) : (
+      <MyServicesItem
+        icon={item.icon}
+        key={item.type}
+        label={item.label}
+        description={item.description}
+      />
+    )
 
   render() {
     const { id } = this.props
