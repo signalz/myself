@@ -123,6 +123,8 @@ export const MY_CONTACT_CONFIG = [
     type: MY_CONTACT_TYPES.LOCATION,
     label: 'app.mycontact.location.label',
     description: 'app.mycontact.location.description',
+    url:
+      'https://www.google.com/maps/place/Hanoi,+Ho%C3%A0n+Ki%E1%BA%BFm,+Hanoi,+Vietnam/@21.0123541,105.7835141,13z/data=!4m5!3m4!1s0x3135ab9bd9861ca1:0xe7887f7b72ca17a9!8m2!3d21.0277595!4d105.8341634',
   },
   {
     type: MY_CONTACT_TYPES.PHONE,

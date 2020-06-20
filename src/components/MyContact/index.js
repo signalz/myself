@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { FormattedMessage } from 'react-intl'
 
+import MyMap from 'components/MyMap'
 import MyServicesItem from 'components/MyServicesItem'
 import { MY_CONTACT_CONFIG } from 'constants.js'
 import { getIcon } from 'utils'
@@ -14,24 +15,11 @@ const contacts = MY_CONTACT_CONFIG.map(item => ({
 }))
 
 class MyContact extends Component {
-  renderContactItem = item =>
-    item.url ? (
-      <a href={item.url} key={item.type} className="my-contact-link-wrapper">
-        <MyServicesItem
-          icon={item.icon}
-          key={item.type}
-          label={item.label}
-          description={item.description}
-        />
-      </a>
-    ) : (
-      <MyServicesItem
-        icon={item.icon}
-        key={item.type}
-        label={item.label}
-        description={item.description}
-      />
-    )
+  renderContactItem = item => (
+    <a href={item.url} key={item.type} className="my-contact-link-wrapper">
+      <MyServicesItem icon={item.icon} label={item.label} description={item.description} />
+    </a>
+  )
 
   render() {
     const { id } = this.props
@@ -41,6 +29,7 @@ class MyContact extends Component {
           <FormattedMessage id="app.mycontact.header" defaultMessage="app.mycontact.header" />
         </div>
         <div className="my-contact-list">{contacts.map(this.renderContactItem)}</div>
+        <MyMap />
       </div>
     )
   }
