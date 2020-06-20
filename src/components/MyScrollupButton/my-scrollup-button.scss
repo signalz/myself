@@ -1,0 +1,24 @@
+@import 'styles/variables.scss';
+
+.my-back-to-top {
+  font-size: 20px;
+  color: #fff;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 46px;
+  border-radius: 50%;
+  border: 2px solid #586376;
+  background-color: #152136;
+  text-align: center;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.my-back-to-top:hover {
+  color: #fff;
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+}

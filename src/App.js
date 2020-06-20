@@ -10,6 +10,8 @@ import messagesVI from './translations/vi.json'
 import MyHeader from './components/MyHeader'
 import MyContent from './components/MyContent'
 import MyFooter from './components/MyFooter'
+import MyScrollupButton from './components/MyScrollupButton'
+
 import './App.scss'
 
 // setup react intl
@@ -25,6 +27,7 @@ const App = () => (
       <MyHeader />
       <MyContent />
       <MyFooter />
+      <MyScrollupButton />
     </Layout>
   </IntlProvider>
 )
