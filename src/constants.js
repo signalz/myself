@@ -144,3 +144,4 @@ export const MY_CV_URL = 'https://drive.google.com/file/d/1Ft2nSHUmsgP9LxBcV9_mD
 
 export const DESKTOP_WIDTH = 992
 export const TABLET_WIDTH = 768
+export const HEADER_HEIGHT = 84

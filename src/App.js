@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Layout } from 'antd'
 import { addLocaleData, IntlProvider } from 'react-intl'
 import localeEN from 'react-intl/locale-data/en'
@@ -10,7 +10,7 @@ import messagesVI from './translations/vi.json'
 import MyHeader from './components/MyHeader'
 import MyContent from './components/MyContent'
 import MyFooter from './components/MyFooter'
-import MyScrollupButton from './components/MyScrollupButton'
+import { SECTIONS } from './constants'
 
 import './App.scss'
 
@@ -21,15 +21,36 @@ const messages = {
   vi: messagesVI,
   en: messagesEN,
 }
-const App = () => (
-  <IntlProvider locale={language} messages={messages[language]}>
-    <Layout className="my-app-layout">
-      <MyHeader />
-      <MyContent />
-      <MyFooter />
-      <MyScrollupButton />
-    </Layout>
-  </IntlProvider>
-)
+
+class App extends Component {
+  state = {
+    activeItem: SECTIONS.HOME.id,
+  }
+
+  onActiveItemChange = activeItem => this.setState({ activeItem })
+
+  render() {
+    const { activeItem } = this.state
+    return (
+      <IntlProvider locale={language} messages={messages[language]}>
+        <Layout className="my-app-layout">
+          <MyHeader activeItem={activeItem} onActiveItemChange={this.onActiveItemChange} />
+          <MyContent onActiveItemChange={this.onActiveItemChange} />
+          <MyFooter />
+        </Layout>
+      </IntlProvider>
+    )
+  }
+}
+
+// const App = () => (
+//   <IntlProvider locale={language} messages={messages[language]}>
+//     <Layout className="my-app-layout">
+//       <MyHeader />
+//       <MyContent />
+//       <MyFooter />
+//     </Layout>
+//   </IntlProvider>
+// )
 
 export default App

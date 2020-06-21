@@ -1,4 +1,5 @@
 import { Layout } from 'antd'
+import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
 
@@ -15,12 +16,14 @@ const { Header } = Layout
 
 class MyHeader extends Component {
   state = {
-    activeItem: 'home',
+    // activeItem: SECTIONS.HOME.id,
     activeMenuButton: false,
   }
 
   onClickItemHandler = value => () => {
-    this.setState({ activeItem: value, activeMenuButton: false })
+    const { onActiveItemChange } = this.props
+    this.setState({ activeMenuButton: false })
+    onActiveItemChange(value)
     window.location = `#${value}`
   }
 
@@ -30,7 +33,8 @@ class MyHeader extends Component {
   }
 
   render() {
-    const { activeItem, activeMenuButton } = this.state
+    const { activeMenuButton } = this.state
+    const { activeItem } = this.props
     return (
       <MediaQuery minWidth={TABLET_WIDTH}>
         {matches =>
@@ -62,6 +66,11 @@ class MyHeader extends Component {
       </MediaQuery>
     )
   }
+}
+
+MyHeader.propTypes = {
+  activeItem: PropTypes.string.isRequired,
+  onActiveItemChange: PropTypes.func.isRequired,
 }
 
 export default MyHeader
