@@ -140,7 +140,7 @@ export const MY_CONTACT_CONFIG = [
   },
 ]
 
-export const MY_CV_URL = 'https://drive.google.com/file/d/1Ft2nSHUmsgP9LxBcV9_mD8vXoWoUUfSf/view'
+export const MY_CV_URL = 'https://drive.google.com/file/d/1D3BjNRVk6ijmVjDWOqh44WfizuCU-V25/view'
 
 export const DESKTOP_WIDTH = 992
 export const TABLET_WIDTH = 768
