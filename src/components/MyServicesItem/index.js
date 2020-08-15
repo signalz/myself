@@ -7,7 +7,9 @@ import './my-services-item.scss'
 
 const MyServicesItem = ({ icon, label, description }) => (
   <div className="my-services-item">
-    <Icon component={icon} className="my-services-item-icon" />
+    <div className="my-services-item-icon-wrapper">
+      <Icon component={icon} className="my-services-item-icon" />
+    </div>
     <div className="my-services-item-header">
       <FormattedMessage id={label} defaultMessage={label} />
     </div>

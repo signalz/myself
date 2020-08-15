@@ -13,17 +13,24 @@
   height: 280px;
   margin: 10px;
 
-  .my-services-item-icon {
-    color: $primaryColor;
+  .my-services-item-icon-wrapper {
     width: 60px;
-    margin-bottom: 20px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+
+    .my-services-item-icon {
+      color: $primaryColor;
+      width: 60px;
+      margin-bottom: 20px;
+    }
   }
 
   .my-services-item-header {
     font-size: 22px;
     font-weight: 600;
     color: #32333c;
-    margin-bottom: 20px;
+    height: 20%;
   }
 
   .my-services-item-description {
@@ -35,6 +42,13 @@
     text-align: center;
     width: 70%;
     word-break: break-word;
+    height: 30%;
+    display: flex;
+    align-items: center;
+
+    span {
+      width: 100%;
+    }
   }
 }
 

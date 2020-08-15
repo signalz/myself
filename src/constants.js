@@ -116,6 +116,7 @@ export const MY_CONTACT_TYPES = {
   LOCATION: 'location',
   PHONE: 'phone',
   EMAIL: 'email',
+  SKYPE: 'skype',
 }
 
 export const MY_CONTACT_CONFIG = [
@@ -137,6 +138,12 @@ export const MY_CONTACT_CONFIG = [
     label: 'app.mycontact.email.label',
     description: 'app.mycontact.email.description',
     url: 'mailto:nguyenngocson4391@gmail.com',
+  },
+  {
+    type: MY_CONTACT_TYPES.SKYPE,
+    label: 'app.mycontact.skype.label',
+    description: 'app.mycontact.skype.description',
+    url: 'skype:ngocsonzz?chat',
   },
 ]
 
