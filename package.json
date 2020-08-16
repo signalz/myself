@@ -22,6 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rimraf build/* && react-scripts build",
+    "lint": "eslint ./src/**/*.js --fix",
     "postbuild": "rimraf build/**/*.map",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -47,6 +48,11 @@
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "lint-staged": {
     "*.{js,jsx}": [
