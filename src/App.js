@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
-import { Layout } from 'antd'
+import React from 'react'
 import { addLocaleData, IntlProvider } from 'react-intl'
 import localeEN from 'react-intl/locale-data/en'
 import localeVI from 'react-intl/locale-data/vi'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import 'antd/dist/antd.css'
 
 import messagesEN from './translations/en.json'
 import messagesVI from './translations/vi.json'
-import MyHeader from './components/MyHeader'
-import MyContent from './components/MyContent'
-import MyFooter from './components/MyFooter'
-import { SECTIONS } from './constants'
+import MyHomePage from './components/MyHomePage'
+import MyNotFoundPage from './components/MyNotFoundPage'
 
 import './App.scss'
 
@@ -22,25 +20,15 @@ const messages = {
   en: messagesEN,
 }
 
-class App extends Component {
-  state = {
-    activeItem: SECTIONS.HOME.id,
-  }
-
-  onActiveItemChange = activeItem => this.setState({ activeItem })
-
-  render() {
-    const { activeItem } = this.state
-    return (
-      <IntlProvider locale={language} messages={messages[language]}>
-        <Layout className="my-app-layout">
-          <MyHeader activeItem={activeItem} onActiveItemChange={this.onActiveItemChange} />
-          <MyContent onActiveItemChange={this.onActiveItemChange} />
-          <MyFooter />
-        </Layout>
-      </IntlProvider>
-    )
-  }
-}
+const App = () => (
+  <Router>
+    <IntlProvider locale={language} messages={messages[language]}>
+      <Switch>
+        <Route exact path="/" component={MyHomePage} />
+        <Route path="*" component={MyNotFoundPage} />
+      </Switch>
+    </IntlProvider>
+  </Router>
+)
 
 export default App

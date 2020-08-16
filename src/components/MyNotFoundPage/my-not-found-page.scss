@@ -1,0 +1,43 @@
+@import 'styles/variables.scss';
+
+.my-not-found-page {
+  .my-not-found-page-icon {
+    color: $primaryColor;
+    width: 300px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .my-not-found-page-code {
+    font-weight: 700;
+    font-size: 60px;
+    color: #000;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .my-not-found-page-title {
+    font-size: 45px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    color: #32333c;
+    text-align: center;
+  }
+
+  .my-not-found-page-description {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #8a8fa3;
+
+    a {
+      color: $primaryColor;
+    }
+
+    a:hover {
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+}

@@ -44,5 +44,11 @@
   "app.mycontact.email.description": "nguyenngocson4391@gmail.com",
   "app.mycontact.skype.label": "Skype",
   "app.mycontact.skype.description": "ngocsonzz",
+  "app.mynotfound.code": "404",
+  "app.mynotfound.title": "Page not found",
+  "app.mynotfound.description.first": "The page you are looking for doesn't exist or an other error occurred.",
+  "app.mynotfound.description.second.one": "Go back or click ",
+  "app.mynotfound.description.second.two": "here",
+  "app.mynotfound.description.second.three": " to choose a new direction.",
   "app.footer": "Son Nguyen © 2020"
 }
