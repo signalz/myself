@@ -2,12 +2,15 @@ import React from 'react'
 import { GoogleMap, withGoogleMap, withScriptjs, Marker } from 'react-google-maps'
 import { compose, withProps } from 'recompose'
 
+import { MY_GOOGLE_URL, MY_HOME_LAT, MY_HOME_LONG } from 'constants.js'
+
 import './my-map.scss'
+
+const DEFAULT_ZOMM = 10
 
 const MyMap = compose(
   withProps({
-    googleMapURL:
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyAZQ5judriEGRuFqPqMvd7hwHBx2K22to4&language=en',
+    googleMapURL: MY_GOOGLE_URL,
     loadingElement: <div className="my-map-loading" />,
     containerElement: <div className="my-map-container" />,
     mapElement: <div className="my-map-ele" />,
@@ -16,8 +19,8 @@ const MyMap = compose(
   withScriptjs,
   withGoogleMap,
 )(props => (
-  <GoogleMap defaultZoom={10} defaultCenter={{ lat: 21.0488237, lng: 105.8087915 }}>
-    {props.isMarkerShown && <Marker position={{ lat: 21.0488237, lng: 105.8087915 }} />}
+  <GoogleMap defaultZoom={DEFAULT_ZOMM} defaultCenter={{ lat: MY_HOME_LAT, lng: MY_HOME_LONG }}>
+    {props.isMarkerShown && <Marker position={{ lat: MY_HOME_LAT, lng: MY_HOME_LONG }} />}
   </GoogleMap>
 ))
 

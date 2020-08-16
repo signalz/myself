@@ -43,14 +43,4 @@ class App extends Component {
   }
 }
 
-// const App = () => (
-//   <IntlProvider locale={language} messages={messages[language]}>
-//     <Layout className="my-app-layout">
-//       <MyHeader />
-//       <MyContent />
-//       <MyFooter />
-//     </Layout>
-//   </IntlProvider>
-// )
-
 export default App
