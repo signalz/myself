@@ -2,7 +2,6 @@ import React from 'react'
 import { addLocaleData, IntlProvider } from 'react-intl'
 import localeEN from 'react-intl/locale-data/en'
 import localeVI from 'react-intl/locale-data/vi'
-import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import 'antd/dist/antd.css'
 
@@ -23,11 +22,6 @@ const messages = {
 
 const App = () => (
   <Router>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>My Title</title>
-      <link rel="canonical" href="http://mysite.com/example" />
-    </Helmet>
     <IntlProvider locale={language} messages={messages[language]}>
       <Switch>
         <Route exact path="/" component={MyHomePage} />
