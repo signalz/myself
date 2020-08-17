@@ -50,6 +50,8 @@
   "app.mynotfound.description.second.one": "Go back or click ",
   "app.mynotfound.description.second.two": "here",
   "app.mynotfound.description.second.three": " to choose a new direction.",
+  "app.myhelmet.description": "Son's intro",
+  "app.myhelmet.title": "Son Nguyen",
   "app.footer": "Son Nguyen © 2020"
 }
 
