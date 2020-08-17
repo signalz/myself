@@ -156,6 +156,8 @@ export const MY_GOOGLE_URL = `https://maps.googleapis.com/maps/api/js?key=${MY_G
 export const MY_HOME_LAT = 21.0488237
 export const MY_HOME_LONG = 105.8087915
 
+export const MY_PROD_URL = 'https://focused-cray-5d2879.netlify.app'
+
 export const DESKTOP_WIDTH = 992
 export const TABLET_WIDTH = 768
 export const HEADER_HEIGHT = 84

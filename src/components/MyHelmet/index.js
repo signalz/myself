@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import { Helmet } from 'react-helmet'
 
 import avatar from 'assets/avatar.jpg'
+import { MY_PROD_URL } from 'constants.js'
 
 const MyHelmet = () => (
   <FormattedMessage id="app.myhelmet.title" defaultMessage="app.myhelmet.title">
@@ -20,7 +21,7 @@ const MyHelmet = () => (
             <meta itemProp="image" content={avatar} />
 
             {/* Facebook Meta Tags */}
-            <meta property="og:url" content="https://focused-cray-5d2879.netlify.app" />
+            <meta property="og:url" content={MY_PROD_URL} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
@@ -28,6 +29,7 @@ const MyHelmet = () => (
 
             {/* Twitter Meta Tags */}
             <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:url" content={MY_PROD_URL} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={avatar} />
