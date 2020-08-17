@@ -4,8 +4,10 @@ import { FormattedMessage } from 'react-intl'
 import MediaQuery from 'react-responsive'
 
 import avatar from 'assets/avatar.jpg'
+
+import shape1 from 'assets/shape-1.png'
 import MySocialLogo from 'components/MySocialLogo'
-import { MY_SOCIAL_LINKS_CONFIG, DESKTOP_WIDTH, MY_BANNER } from 'constants.js'
+import { DESKTOP_WIDTH, MY_BANNER, MY_SOCIAL_LINKS_CONFIG } from 'constants.js'
 import { getIcon } from 'utils'
 
 import './my-banner.scss'
@@ -22,6 +24,9 @@ class MyBanner extends Component {
     const { id } = this.props
     return (
       <div id={id} className="my-banner">
+        <div className="my-shape">
+          <img src={shape1} alt="Shape" />
+        </div>
         <div className="my-banner-left">
           <div className="my-description">
             <div className="my-hello-subtitle">
