@@ -31,15 +31,12 @@ const App = () => (
             <Helmet>
               {/* HTML Meta Tags */}
               <title>{title}</title>
-              <meta
-                name="description"
-                content={
-                  <FormattedMessage
-                    id="app.myhelmet.description"
-                    defaultMessage="app.myhelmet.description"
-                  />
-                }
-              />
+              <FormattedMessage
+                id="app.myhelmet.description"
+                defaultMessage="app.myhelmet.description"
+              >
+                {description => <meta name="description" content={description} />}
+              </FormattedMessage>
 
               {/* Google / Search Engine Tags */}
               <meta
