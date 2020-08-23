@@ -1,6 +1,7 @@
 {
   "name": "myself",
   "version": "1.0.0",
+  "description": "Son's intro",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.2.1",

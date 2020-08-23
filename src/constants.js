@@ -32,7 +32,7 @@ export const MY_SOCIAL_TYPES = {
 export const MY_SOCIAL_LINKS_CONFIG = [
   { url: 'https://www.facebook.com/ngocson.nguyen.0403', type: MY_SOCIAL_TYPES.FACEBOOK },
   { url: 'https://github.com/signalz', type: MY_SOCIAL_TYPES.GITHUB },
-  { url: 'https://www.linkedin.com/in/ngoc-son-nguyen-736b90126', type: MY_SOCIAL_TYPES.LINKEDIN },
+  { url: 'https://www.linkedin.com/in/nguyenngocson4391', type: MY_SOCIAL_TYPES.LINKEDIN },
   { url: 'https://twitter.com/signsz', type: MY_SOCIAL_TYPES.TWITTER },
 ]
 
