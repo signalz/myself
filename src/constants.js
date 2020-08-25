@@ -149,9 +149,11 @@ export const MY_CONTACT_CONFIG = [
 
 export const MY_CV_URL = 'https://drive.google.com/file/d/1D3BjNRVk6ijmVjDWOqh44WfizuCU-V25/view'
 
-export const { MY_GOOGLE_KEY } = process.env
+// const { MY_GOOGLE_KEY } = process.env
+// eslint-disable-next-line
+export const REACT_APP_GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
 export const MY_GOOGLE_LANG = 'en'
-export const MY_GOOGLE_URL = `https://maps.googleapis.com/maps/api/js?key=${MY_GOOGLE_KEY}&language=${MY_GOOGLE_LANG}`
+export const MY_GOOGLE_URL = `https://maps.googleapis.com/maps/api/js?key=${REACT_APP_GOOGLE_KEY}&language=${MY_GOOGLE_LANG}`
 
 export const MY_HOME_LAT = 21.0488237
 export const MY_HOME_LONG = 105.8087915
