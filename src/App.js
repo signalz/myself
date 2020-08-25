@@ -10,6 +10,7 @@ import messagesVI from './translations/vi.json'
 import MyHomePage from './components/MyHomePage'
 import MyHelmet from './components/MyHelmet'
 import MyNotFoundPage from './components/MyNotFoundPage'
+import MyPicturesPage from './components/MyPicturesPage'
 
 import './App.scss'
 
@@ -28,6 +29,7 @@ const App = () => (
         <MyHelmet />
         <Switch>
           <Route exact path="/" component={MyHomePage} />
+          <Route exact path="/pics" component={MyPicturesPage} />
           <Route path="*" component={MyNotFoundPage} />
         </Switch>
       </>
