@@ -149,7 +149,7 @@ export const MY_CONTACT_CONFIG = [
 
 export const MY_CV_URL = 'https://drive.google.com/file/d/1D3BjNRVk6ijmVjDWOqh44WfizuCU-V25/view'
 
-export const MY_GOOGLE_KEY = 'AIzaSyAZQ5judriEGRuFqPqMvd7hwHBx2K22to4'
+export const { MY_GOOGLE_KEY } = process.env
 export const MY_GOOGLE_LANG = 'en'
 export const MY_GOOGLE_URL = `https://maps.googleapis.com/maps/api/js?key=${MY_GOOGLE_KEY}&language=${MY_GOOGLE_LANG}`
 
