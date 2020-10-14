@@ -6,15 +6,14 @@ const MyPicturesPage = () => (
   <div className="wrapper">
     <div className="inner">
       <div className="content">
-        <h1>Radius</h1>
+        <h1>Pictures</h1>
         <h2>
-          A fully responsive masonry-style
+          Son pictures gallery
           <br />
-          portfolio template.
         </h2>
-        <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md">
+        <div>
           <span>Lets Go</span>
-        </a>
+        </div>
       </div>
       {/* <a href="#" class="button hidden">
         <span>Let's Go</span>
