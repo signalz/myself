@@ -147,7 +147,8 @@ export const MY_CONTACT_CONFIG = [
   },
 ]
 
-export const MY_CV_URL = 'https://drive.google.com/file/d/1D3BjNRVk6ijmVjDWOqh44WfizuCU-V25/view'
+export const MY_CV_URL =
+  'https://drive.google.com/file/d/1DZtSaEIftlIpbueoYaY9RWCCKZkNZyUH/view?usp=sharing'
 
 const { REACT_APP_GOOGLE_KEY } = process.env
 export const MY_GOOGLE_LANG = 'en'
