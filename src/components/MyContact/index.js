@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { FormattedMessage } from 'react-intl'
 
-import MyMap from 'components/MyMap'
 import MyServicesItem from 'components/MyServicesItem'
 import { MY_CONTACT_CONFIG } from 'constants.js'
 import { getIcon } from 'utils'
@@ -29,7 +28,6 @@ class MyContact extends Component {
           <FormattedMessage id="app.mycontact.header" defaultMessage="app.mycontact.header" />
         </div>
         <div className="my-contact-list">{contacts.map(this.renderContactItem)}</div>
-        <MyMap />
       </div>
     )
   }
